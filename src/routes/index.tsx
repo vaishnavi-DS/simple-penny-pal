@@ -284,8 +284,8 @@ function Index() {
                     <span
                       className={`shrink-0 text-sm font-semibold ${
                         transaction.type === "income"
-                          ? "text-emerald-600"
-                          : "text-rose-600"
+                          ? "text-income"
+                          : "text-expense"
                       }`}
                     >
                       {transaction.type === "income" ? "+" : "-"}
@@ -319,14 +319,14 @@ function SummaryCard({
   variant: "income" | "expense" | "balance";
 }) {
   const variantClasses = {
-    income: "border-emerald-200 bg-emerald-50/50",
-    expense: "border-rose-200 bg-rose-50/50",
+    income: "border-income/25 bg-income/5",
+    expense: "border-expense/25 bg-expense/5",
     balance: "border-border bg-background",
   };
 
   const amountClasses = {
-    income: "text-emerald-600",
-    expense: "text-rose-600",
+    income: "text-income",
+    expense: "text-expense",
     balance: "text-foreground",
   };
 
@@ -359,8 +359,8 @@ function TypeButton({
     "rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2";
 
   const selectedClasses = {
-    income: "border-emerald-500 bg-emerald-50 text-emerald-700",
-    expense: "border-rose-500 bg-rose-50 text-rose-700",
+    income: "border-income bg-income/10 text-income",
+    expense: "border-expense bg-expense/10 text-expense",
   };
 
   const unselectedClasses =
